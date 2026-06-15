@@ -1,0 +1,43 @@
+{
+    "name": "bleeld/think-pay",
+    "description": "ThinkPHP 8 支付服务插件，支持支付宝、微信支付等多厂商支付服务，企业级安全",
+    "type": "library",
+    "keywords": [
+        "thinkphp",
+        "payment",
+        "alipay",
+        "wechat",
+        "支付",
+        "支付宝",
+        "微信"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bleeld",
+            "email": "support@bleeld.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "ext-simplexml": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "bleeld\\pay\\": "src/"
+        }
+    },
+    "extra": {
+        "think": {
+            "services": [
+                "bleeld\\pay\\Service"
+            ],
+            "config": {
+                "pay": "config/pay.php"
+            }
+        }
+    }
+}
